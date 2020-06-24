@@ -19,6 +19,10 @@ filtered_img = img.convert('L')   # converts format to greyscale
 # crooked = filtered_img.rotate(90)
 # crooked.save('crooked_grey.png', 'png')
 
-resized_img = filtered_img.resize((300, 300))
-resized_img.save('resized_grey.png', 'png')
+# resized_img = filtered_img.resize((300, 300))
+# resized_img.save('resized_grey.png', 'png')
+
+box = (100, 100, 400, 400)
+region = filtered_img.crop(box)
+region.save('cropped_grey.png', 'png')
 
